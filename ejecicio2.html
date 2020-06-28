@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <h5>Digite el tipo de producto.</h5>
+    <input id="productType"   type="text" ><br><br>   
+    <h5>Digite el tipo de valor del producto.</h5>
+    <input id="productValue"   type="text" ><br><br>
+    <button type="button" onclick="calcular()">calcular impuesto</button>
+    <script  type="text/javascript">
+        function calcular() {
+            var tipoProducto = document.getElementById("productType").value;
+            var valor = parseInt(document.getElementById("productValue").value);
+            obtenerValorConImpuestos(valor,tipoProducto);
+        }
+        function obtenerValorConImpuestos(valor, tipoProducto) {
+            switch(tipoProducto) {
+                case "1":
+                  alert(`"el valor del producto ${tipoProducto} con impuestos es  " ${total =valor + ((valor * 21)/100)}`)
+                break;
+                case "2":
+                  alert(`"el valor del producto ${tipoProducto} con impuestos es  " ${total = valor + ((valor * 10)/100)}`)
+                break;
+                case "3":
+                  alert(`"el valor del producto ${tipoProducto} con impuestos es  " ${total = valor + ((valor * 5)/100)}`)
+                break;
+                default:
+                alert("el tipo de producto no esta en inventario");
+                break;
+            }
+        }
+    </script>    
+</body>
+</html>

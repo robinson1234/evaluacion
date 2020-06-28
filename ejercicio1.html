@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion</title>
+</head>
+<body>
+    <h5>Digite el tipo de motor.</h5>
+    <input id="motoType"   type="text" ><br><br>
+    <button type="button" onclick="consultar()">consultar</button>
+    <script  type="text/javascript">
+        function consultar() {  
+            var tipo = document.getElementById("motoType").value
+            tipoMotor(tipo)
+        }
+        function tipoMotor(tipo) {  
+            switch (tipo) {
+                case "0":
+                    alert("“No hay establecido un valor definido para el tipo de bomba”")
+                    break;
+                case "1":
+                    alert("“La bomba es una bomba de agua”");
+                    break;
+                case "2":
+                    alert("“La bomba es una bomba de gasolina”");
+                    break;
+                case "3":
+                    alert("“La bomba es una bomba de hormigón”");
+                    break;
+                case "4":
+                    alert("“La bomba es una bomba de pasta alimenticia”");
+                    break;
+                default:
+                    alert("“No existe un valor válido para tipo de bomba”");
+                    break;
+            }
+        }
+    </script>    
+</body>
+</html>
